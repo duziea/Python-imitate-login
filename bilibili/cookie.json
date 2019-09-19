@@ -1,0 +1,74 @@
+[
+    {
+        "domain": "bilibili.com",
+        "expiry": 1571477433.392321,
+        "httpOnly": false,
+        "name": "bili_jct",
+        "path": "/",
+        "secure": false,
+        "value": "d3b41794477937f1e99ce39342373955"
+    },
+    {
+        "domain": "bilibili.com",
+        "expiry": 1571477433.392296,
+        "httpOnly": true,
+        "name": "SESSDATA",
+        "path": "/",
+        "secure": false,
+        "value": "f9431e99%2C1571477432%2C8b54fd91"
+    },
+    {
+        "domain": "bilibili.com",
+        "expiry": 1571477433.392235,
+        "httpOnly": false,
+        "name": "DedeUserID",
+        "path": "/",
+        "secure": false,
+        "value": "9184308"
+    },
+    {
+        "domain": "bilibili.com",
+        "expiry": 2177452800.084363,
+        "httpOnly": false,
+        "name": "LIVE_BUVID",
+        "path": "/",
+        "secure": false,
+        "value": "AUTO4615688854241511"
+    },
+    {
+        "domain": "bilibili.com",
+        "expiry": 1663493424.751965,
+        "httpOnly": false,
+        "name": "buvid3",
+        "path": "/",
+        "secure": false,
+        "value": "476D3F26-87FA-45F1-98A3-B3B42529AE5F155835infoc"
+    },
+    {
+        "domain": "bilibili.com",
+        "expiry": 1571477433.392271,
+        "httpOnly": false,
+        "name": "DedeUserID__ckMd5",
+        "path": "/",
+        "secure": false,
+        "value": "34f918405a002914"
+    },
+    {
+        "domain": "bilibili.com",
+        "expiry": 1600421424,
+        "httpOnly": false,
+        "name": "_uuid",
+        "path": "/",
+        "secure": false,
+        "value": "6EFBDC82-FB88-EE56-DD67-CA3067CE0EE724595infoc"
+    },
+    {
+        "domain": "bilibili.com",
+        "expiry": 1600421424.44562,
+        "httpOnly": false,
+        "name": "sid",
+        "path": "/",
+        "secure": false,
+        "value": "lt1qp8iz"
+    }
+]
