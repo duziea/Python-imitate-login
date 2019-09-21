@@ -1,7 +1,6 @@
 import asyncio
 from pyppeteer import launch
 import time
-from retry import retry      # 设置重试次数用的
 import json
 
 count = 1
