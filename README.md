@@ -8,4 +8,5 @@
 3.[b站](https://github.com/duziea/Python-imitate-login/blob/master/bilibili/login.py)
 
 4.[球球音乐评论](https://github.com/duziea/Python-imitate-login/blob/master/qqmusic/get_comment.py) 
-5.[拉钩招聘](https://github.com/duziea/Python-imitate-login/blob/master/lagou/lagou_search.py)
+
+5.[拉钩招聘(仅爬取job信息，未实现登陆)](https://github.com/duziea/Python-imitate-login/blob/master/lagou/lagou_search.py)
