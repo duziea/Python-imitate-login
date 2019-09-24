@@ -19,7 +19,8 @@ class lagou():
         获取session，用与之后的模拟ajax请求
         '''
         s = requests.Session()
-        s.get(self.get_session_url,headers=self.headers,verify=False)
+        s.get(self.get_session_url,headers=self.headers,verify=True)
+        print(s.cookies)
 
         return s
 
@@ -47,7 +48,7 @@ class lagou():
         for i in result:
             info = {}
             positionId = i['positionId']  #职位id，用于组成detail_url
-
+            
             info['positionName'] = i['positionName']   #职位名
             info['salary'] = i['salary']                #薪水   
             info['workYear'] = i['workYear']            #工作经验
@@ -86,11 +87,12 @@ if __name__ == "__main__":
     }   
 
     lg = lagou()
-    s = lg.get_session()
-    for i in range(1,11):
-        data['pn'] = str(i)
-        text = lg.get_positon(s,data=data,params=params)
-        lg.parse_jobinfo(text)
-        print(f'爬取第{i}页')
+    for i in range(1,10):
+        s = lg.get_session()
+    # for i in range(1,3):
+    #     data['pn'] = str(i)
+    #     text = lg.get_positon(s,data=data,params=params)
+    #     lg.parse_jobinfo(text)
+    #     print(f'爬取第{i}页')
     
-    lg.save_as_josn()
+    # lg.save_as_josn()
