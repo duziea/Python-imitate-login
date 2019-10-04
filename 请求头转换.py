@@ -15,14 +15,17 @@ def header_to_dict(header):
 if __name__ == "__main__":
 
     header = '''
-Host: app.gsxt.gov.cn
-Accept-Encoding: br, gzip, deflate
-Accept: application/json
-User-Agent: Mozilla/5.0 (iPad; CPU OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.5(0x17000523) NetType/WIFI Language/zh_CN
-Accept-Language: zh-cn
-Content-Length: 229
-Content-Type: application/x-www-form-urlencoded
+openId=&pageNo=1&pageSize=10 HTTP/1.1
+Host: gate.lagou.com
+Content-Type: application/json
 Connection: keep-alive
+X-L-REQ-HEADER: {deviceType:10}
+Accept: */*
+User-Agent: Mozilla/5.0 (iPad; CPU OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.5(0x17000523) NetType/WIFI Language/zh_CN
+Referer: https://servicewechat.com/wx7523c9b73699af14/240/page-frame.html
+Accept-Language: zh-cn
+Accept-Encoding: br, gzip, deflate
+Content-Length: 2
 
     '''
     header_to_dict(header)

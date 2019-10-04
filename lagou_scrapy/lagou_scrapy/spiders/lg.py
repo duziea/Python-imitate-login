@@ -4,7 +4,7 @@ from fake_useragent import UserAgent
 import json
 from lagou_scrapy.items import LagouScrapyItem, DetailItem
 from bs4 import BeautifulSoup
-
+import scrapy_redis
 
 class LgSpider(scrapy.Spider):
     name = 'lg'

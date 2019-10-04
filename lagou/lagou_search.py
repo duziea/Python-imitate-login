@@ -6,7 +6,7 @@ from fake_useragent import UserAgent
 class lagou():
     def __init__(self):
         self.get_session_url = 'https://www.lagou.com/jobs/list_python/p-city_0?px=default&gx=&isSchoolJob=1#filterBox'
-        self.get_positon_url = "https://www.lagou.com/jobs/positionAjax.json?city=全国&needAddtionalResult=false"
+        self.get_positon_url = "https://www.lagou.com/jobs/positionAjax.json?city=北京&needAddtionalResult=false"
         self.headers = {
             'Accept': 'application/json, text/javascript, */*; q=0.01',
             'Referer': 'https://www.lagou.com/jobs/list_%E8%BF%90%E7%BB%B4?city=%E6%88%90%E9%83%BD&cl=false&fromSearch=true&labelWords=&suginput=',
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     data = {
         "first": "True",
         "pn": '',
-        "kd": "python"                  
+        "kd": "前端"                  
     }
     params = {
         "needAddtionalResult": "false",
@@ -87,12 +87,12 @@ if __name__ == "__main__":
     }   
 
     lg = lagou()
-    for i in range(1,10):
-        s = lg.get_session()
-    # for i in range(1,3):
-    #     data['pn'] = str(i)
-    #     text = lg.get_positon(s,data=data,params=params)
-    #     lg.parse_jobinfo(text)
-    #     print(f'爬取第{i}页')
+    # for i in range(1,10):
+    s = lg.get_session()
+    for i in range(1,5):
+        data['pn'] = str(i)
+        text = lg.get_positon(s,data=data,params=params)
+        lg.parse_jobinfo(text)
+        print(f'爬取第{i}页')
     
-    # lg.save_as_josn()
+    lg.save_as_josn()

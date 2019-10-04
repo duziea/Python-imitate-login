@@ -65,7 +65,7 @@ def export_pie(dic):
             radius=["40%", "75%"],
         )
         .set_global_opts(
-            title_opts=opts.TitleOpts(title="java_salary"),
+            title_opts=opts.TitleOpts(title="北京前端薪资分布"),
             legend_opts=opts.LegendOpts(
                 type_="scroll", pos_left="80%", orient="vertical"
             ),

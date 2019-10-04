@@ -1,0 +1,6 @@
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json, text/javascript, */*; q=0.01
+Referer: https://www.lagou.com/jobs/list_%E8%BF%90%E7%BB%B4?city=%E6%88%90%E9%83%BD&cl=false&fromSearch=true&labelWords=&suginput=
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.67 Safari/537.36
+Accept-Encoding: gzip,deflate
+Cookie: X_HTTP_TOKEN=42daf4b72327b2815833769651bf5e71415983ed09; user_trace_token=20190928202305-f39b0ef7-a137-4fb7-8b4f-8ad77739bd18; JSESSIONID=ABAAABAAADEAAFI31DC0B1DC4829E4722F6525C7A85F6C5; SEARCH_ID=999e6755a5494e96b30d880561b0fb2b; X_HTTP_TOKEN=099d604be063347268337696513c2b08bf8f1d8da2
