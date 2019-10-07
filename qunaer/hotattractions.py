@@ -140,7 +140,8 @@ def saleCount_and_totalPrice(filepath):
         .set_global_opts(
                         title_opts=opts.TitleOpts(title="国庆冷门旅游景点top30"),
                         # xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-90)),
-                        # legend_opts = opts.LegendOpts(pos_left='60%'),                      
+                        # legend_opts = opts.LegendOpts(pos_left='60%'),   
+                        datazoom_opts = opts.DataZoomOpts(pos_left ="20%")                
                         )
     )
     # return bar
@@ -187,13 +188,13 @@ def mapchart(filepath):
 
 if __name__ == "__main__":
 
-    # filepath = r'C:\Users\Administrator\Desktop\Python-imitate-login\qunaer\down30.xlsx'
-    # # satrtpage = 3939
-    # # endpage = 3941
-    # # write_to_excel(filepath,satrtpage,endpage)
+    filepath = r'C:\Users\Administrator\Desktop\Python-imitate-login\qunaer\down30.xlsx'
+    # satrtpage = 40
+    # endpage = 42
+    # write_to_excel(filepath,satrtpage,endpage)
     # saleCount_and_totalPrice(filepath)
 
-    filepath = r'C:\Users\Administrator\Desktop\Python-imitate-login\qunaer\down30.xlsx'
+   
     # satrtpage = 1
     # endpage = 3
     # write_to_excel(filepath,satrtpage,endpage)

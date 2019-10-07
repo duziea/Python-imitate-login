@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 from fake_useragent import UserAgent
 import traceback
 from saveUrl import urlDB
+import cchardet
 
 class wangyinews():
     def __init__(self):
@@ -17,9 +18,17 @@ class wangyinews():
     def save_to_db(self, url, html,status_code):
         if status_code == 200:
             self.db.set_suc(url)
-        
-        
 
+    def save_to_wait(self, url):
+        self.db.set_wait(url)
+        
+    def get_wait_url(self):
+        url = self.db.get_wait()
+        return url
+
+    def save_to_item(self,html):
+        self.db.save_item(html)
+        
 
     def get_all_urls(self,hub_url):
         # 下载新闻首页html
@@ -41,7 +50,7 @@ class wangyinews():
         return urls
 
 
-    def filter_urls(self,url):
+    def filter_url(self,url):
         '''
         筛选url
         #判断url是否已http或https开头，去除非法url
@@ -54,6 +63,12 @@ class wangyinews():
             # print(parseResult)
             if parseResult.path.endswith('.html'):
                 return url
+            else:
+                return ''
+        
+        else:
+            return ''
+    
 
 
     def download(self,url, timeout=10, debug=False):
@@ -73,14 +88,13 @@ class wangyinews():
         try:
             response = requests.get(url, timeout=timeout, headers=headers_)
             status_code = response.status_code
-            encoding = cchardet.detect(response.content)['encoding']
-            html = response.content.decode(encoding)
-            if status_code == 302 or 301:
-                html = '302 or 301'
-            elif status_code == 40:
-                html = '404'
-            elif status_code == 502:
-                html = '502'
+            print(status_code)
+            if status_code == 200:
+                encoding = cchardet.detect(response.content)['encoding']
+                html = response.content.decode(encoding)
+                return html
+            else:
+                return False
         except:
             if debug:
                 traceback.print_exc()
@@ -89,8 +103,31 @@ class wangyinews():
             html = ''
             status_code = 0
 
-        return status_code, html
+    def parse_html(self,html):
+        
+
+
+def run():
+    '''
+    创建实例
+    1、爬取所有链接，返回urls
+    2、对链接过滤，找出新闻链接，存入待爬取数据库
+    '''
+
+    wynews = wangyinews()
+    hub_url = 'https://news.163.com/'
+    urls = wynews.get_all_urls(hub_url)
+    for url in urls:
+        url = wynews.filter_url(url)
+        if url:
+            wynews.save_to_wait(url)
+
+    url = wynews.get_wait_url()
+    
+    html = wynews.download(url)
+    wynews.save_to_item(html)
+    
 
 
 if __name__ == "__main__":
-
+    run()
