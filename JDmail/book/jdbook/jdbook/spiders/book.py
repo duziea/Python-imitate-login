@@ -5,6 +5,7 @@ from jdbook.items import JdbookItem
 from scrapy_redis.spiders import RedisSpider
 
 
+
 class BookSpider(RedisSpider):
     name = 'book'
     allowed_domains = ['jd.com','p.3.cn']

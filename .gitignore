@@ -2,3 +2,4 @@
 *.jpg
 *.html
 *.xlsx
+/lagou_scrapy/.scrapy
